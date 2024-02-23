@@ -1,12 +1,13 @@
 
 
-typedef struct {
-	 NodePtr headPtr,tailPtr;
-	int size;
-}Queue;
+typedef struct Queue{
+   order *head,*tail;
+    int size;
+}order;
 
 
-void enqueue_struct(Queue* q, int x){
+
+void enqueue_struct(order* q, int x){
   Node *new_node=(Node*) malloc(sizeof(Node));
 
 if(new_node){ 
@@ -19,7 +20,7 @@ if(new_node){
 }
 
 
-int dequeue_struct(Queue *q){
+int dequeue_struct(order *q){
    NodePtr t=q->headPtr;
    if(t){
    int value=t->data;
@@ -32,7 +33,7 @@ int dequeue_struct(Queue *q){
    free(t);
    return value;
    }
-   printf("Empty queue");
+   printf("order %d is complted\n");
    return 0;
 }
 

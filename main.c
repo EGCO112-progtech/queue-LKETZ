@@ -4,22 +4,16 @@
 #include "Node.h"
 #include "Queue.h"
 
-int main(int argc , char **argv) {
+int main(int argc , char **argv) 
+{
   NodePtr headPtr=NULL;
   NodePtr tailPtr=NULL;
 // 5 x 9 x 7 x 8 2 x
   int x;
-  // enqueue(&headPtr, &tailPtr,5);
-  // enqueue(&headPtr, &tailPtr,6);
-  // enqueue(&headPtr, &tailPtr,7);
-  // x = dequeue(&headPtr, &tailPtr);
-  // printf("%d",x);
-
-  // x = dequeue(&headPtr, &tailPtr);
-  // printf("%d",x);
-
-  // x = dequeue(&headPtr, &tailPtr);
-  // printf("%d",x);
+  printf("List of order number\n");
+  printf("Ramen 100 Baht\n");
+  printf("Somtum 20 Baht\n");
+  printf("Fried Chicken 50 Baht\n");
 
   Queue q;
   q.headPtr = NULL;
@@ -28,11 +22,13 @@ int main(int argc , char **argv) {
 
 
  for(int i=1;i<argc;i++){
+        
+        //price
         if(strcmp(argv[i],"x")==0){
           if(q.size>=1)
           {
-             x=dequeue_struct(&q);
-            printf("dequeing %d\n",x);
+            x=dequeue_struct(&q);
+            printf("customer %d\n",x);
           }
           else
           {
