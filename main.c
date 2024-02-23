@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include "Node.h"
-
 #include "Queue.h"
 
 int main(int argc , char **argv) {
@@ -22,7 +21,7 @@ int main(int argc , char **argv) {
   x = dequeue(&headPtr, &tailPtr);
   printf("%d",x);
 
- for(i=1;i<argc;i++){
+ for(int i=1;i<argc;i++){
         if(strcmp(argv[i],"x")==0){
             x=dequeue(&headPtr,&tailPtr);
             printf("dequeing %d\n",x);
