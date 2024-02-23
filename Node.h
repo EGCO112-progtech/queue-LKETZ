@@ -38,7 +38,8 @@ int dequeue(NodePtr* head, NodePtr* tail){
   int value=t->data;
   *head= (*head)->nextPtr; // NULL
   free(t);
-  if(*head==NULL) *tail=NULL;
+  if(*head==NULL) 
+  *tail=NULL;
   return value;
   }
   printf("Empty queue");
