@@ -7,11 +7,11 @@ typedef struct {
 
 
 void enqueue_struct(Queue* q, int x){
-  NodePtr *new_node=(Node) malloc(sizeof(Node));
+  Node *new_node=(Node*) malloc(sizeof(Node));
 if(new_node){ 
-  if(q->==0) q->headPtr = new_node;
-  else q->tailPtr->nextPtr = new_node;
-  q->tailPtr = new_node;
+  if(q->size==0) q->headPtr=new_node;
+  else q->tailPtr->nextPtr=new_node;
+  q->tailPtr=new_node;
   q->size++;
  }
 }
@@ -20,11 +20,11 @@ if(new_node){
 int dequeue_struct(Queue *q){
    NodePtr t=q->headPtr;
    if(t){
-   int value= t->data;
-   q->headPtr = t->nextPtr;
+   int value=t->data;
+   q->headPtr=t->nextPtr;
    if(q->size==1)
    {
-    q->tailPtr = NULL;
+    q->tailPtr=NULL;
    }
    q->size--;
    free(t);
